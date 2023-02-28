@@ -7,7 +7,7 @@ console.log("Number of categories:" + listEl.length)
     const categoryEls = element.querySelectorAll('li');
         const text = element.querySelector('h2').textContent;
         
-    console.log('Category:' + text + ' Elements :' + categoryEls.length)  
+    console.log('Category: ' + text + ' Elements: ' + categoryEls.length)  
     })
 
 

@@ -1,26 +1,26 @@
 
 
-
-
-
-/*const inputMaxEl = document.querySelector(inputEl.dataset.length);textInput.value = ""
-const checkInputLengthEl = inputEl.addEventListener("blur", (e) => {
-inputEl.blur() = inputEl.length;
-});
-
-inputEl.addEventListener("blur", () => {
-inputEl.blur() ;
-});*/
-
 let inputEl = document.querySelector("#validation-input");
-const maxValEl = inputEl.dataset.length
+const validLengthEl = inputEl.dataset.length
+let validLengthNumEl = parseInt(validLengthEl)
+let stringValueEl = inputEl.value.length
 
-inputEl.addEventListener("input", (e) => {
-    if (e.target.value.length =< maxValEl) {
+
+inputEl.addEventListener('input', handleInput)
+
+function handleInput(){
+    if (inputEl.value.length === validLengthNumEl){
+        inputEl.classList.remove('invalid');
         inputEl.classList.add('valid')
     }
-    else if (e.target.value.length > maxValEl) {
-        inputEl.classList.add('invalid') 
+        if (inputEl.value.length !== validLengthNumEl){
+        inputEl.classList.remove('valid');
+        inputEl.classList.add('invalid')
     }
+}
+
+inputEl.addEventListener('blur', (e) =>{
+    let newMessageEl = inputEl.placeholder = "You entered " + e.target.value.length + " symbols"  
+    e.target.value = newMessageEl
 })
 
