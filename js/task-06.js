@@ -8,7 +8,8 @@ let stringValueEl = inputEl.value.length
 
 inputEl.addEventListener('input', handleInput)
 
-function handleInput(){
+function handleInput() {
+    console.log(inputEl.value.length)
     if (inputEl.value.length === validLengthNumEl){
         inputEl.classList.remove('invalid');
         inputEl.classList.add('valid')
