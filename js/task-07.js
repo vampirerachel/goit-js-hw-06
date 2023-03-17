@@ -1,7 +1,7 @@
 let sliderEl = document.querySelector('#font-size-control')
 let spanEl = document.querySelector('#text')
 
-spanEl.style.fontSize = '54px';
+spanEl.style.fontSize = (parseInt(sliderEl.value));
 
 sliderEl.addEventListener('input', (e) => {
     
